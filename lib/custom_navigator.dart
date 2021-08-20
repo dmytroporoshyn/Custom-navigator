@@ -180,6 +180,11 @@ class _CustomNavigatorState extends State<CustomNavigator>
     }());
     return result;
   }
+
+  @override
+  Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
+    return didPushRoute(routeInformation.location);
+  }
 }
 
 class PageRoutes {
